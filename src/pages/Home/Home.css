@@ -1,0 +1,109 @@
+﻿.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(15, 123, 108, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 800px;
+    width: 100%;
+}
+
+.hero-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.hero-name {
+    position: relative;
+    color: var(--text-primary);
+    display: inline-block;
+}
+/* underline */
+.hero-name::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: repeating-linear-gradient(
+            90deg,
+            var(--teal-light) 0px,
+            var(--teal-light) 6px,
+            transparent 6px,
+            transparent 10px
+    );
+    transition: width 1.2s ease 0.3s;
+}
+
+.hero-name.animate::after {
+    width: 100%;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* --------- Paper Airplane PNG ---------*/
+.hero-name-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.airplane-wrapper {
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+    opacity: 0;
+    transform: translateX(0px);
+    transition: none;
+}
+
+.airplane-wrapper.animate {
+    opacity: 1;
+    transform: translateX(calc(100% + 412px));
+    transition: opacity 0.1s ease 0.3s, transform 1.2s ease 0.3s;
+}
+
+.airplane-icon {
+    width: 28px;
+    height: 28px;
+}

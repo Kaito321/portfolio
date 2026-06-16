@@ -1,0 +1,66 @@
+﻿/* ─── Section Layout ─────────────────────────────────── */
+.section-padding {
+    padding: 8rem 2rem;
+}
+
+.section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ─── Section Typography ─────────────────────────────── */
+.section-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    line-height: 1.2;
+}
+
+/* ─── Buttons ────────────────────────────────────────── */
+.btn-primary {
+    padding: 0.875rem 2rem;
+    background: var(--teal-primary);
+    color: var(--text-primary);
+    border-radius: 4px;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: var(--teal-light);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    padding: 0.875rem 2rem;
+    border: 1px solid var(--teal-primary);
+    color: var(--teal-light);
+    border-radius: 4px;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: rgba(15, 123, 108, 0.1);
+    transform: translateY(-2px);
+}
