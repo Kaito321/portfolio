@@ -80,9 +80,10 @@
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 
-/* --------- Paper Airplane PNG ---------*/
+/* --------- Paper Airplane ---------*/
 .hero-name-wrapper {
     position: relative;
     display: inline-block;
@@ -106,4 +107,42 @@
 .airplane-icon {
     width: 28px;
     height: 28px;
+}
+
+/* --------- Hero CTA buttons ---------*/
+.btn-oval {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.875rem 2rem;
+    background: var(--teal-primary);
+    color: var(--text-primary);
+    border-radius: 50px;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-oval:hover {
+    background: var(--teal-light);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+}
+
+.btn-icon-only {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--teal-primary);
+    color: var(--teal-light);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.btn-icon-only:hover {
+    background: rgba(15, 123, 108, 0.1);
+    transform: translateY(-2px);
 }
