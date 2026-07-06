@@ -72,7 +72,16 @@
 }
 
 @media (max-width: 768px) {
+
     .experience-header {
         flex-direction: column;
+    }
+    
+    .experience-bullets li {
+        font-size: 0.875rem;
+    }
+
+    .experience-role {
+        font-size: 1.1rem;
     }
 }
