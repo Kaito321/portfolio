@@ -6,7 +6,7 @@ function Footer() {
             <div className="footer-inner">
                 <p className="footer-logo">RR</p>
                 <p className="footer-copy">
-                    Designed & built by Rosa Rivera
+                    Designed & built by Rosa Rivera 2026
                 </p>
                 <div className="footer-links">
                     <a href="mailto:rars213@gmail.com">Email</a>

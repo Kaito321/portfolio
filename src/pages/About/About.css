@@ -59,3 +59,13 @@
     color: var(--text-muted);
     line-height: 1.4;
 }
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+}

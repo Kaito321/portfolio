@@ -4,27 +4,21 @@ const projects = [
     {
         title: 'Portfolio Website',
         description:
-            'A full stack personal portfolio built with React, TypeScript, and Vite. Deployed on AWS with CI/CD via GitHub Actions. Features AI integration and a clean, responsive design.',
+            'A full stack personal portfolio built with React, TypeScript, and Vite. Deployed on AWS with CI/CD via ' +
+            'GitHub Actions. Features AI integration and a clean, responsive design.',
         tags: ['React', 'TypeScript', 'AWS', 'Docker', 'CI/CD'],
         status: 'In Progress',
         link: '#',
     },
     {
-        title: 'Canadian Provincial Tax Engine',
+        title: 'JobSearch App with Claude',
         description:
-            'Engineered multi-bracket provincial tax logic for British Columbia, Quebec, and Ontario within a core payroll processing system. Included self-correction logic to prevent over-taxation without manual intervention.',
-        tags: ['C#', '.NET', 'SQL Server', 'Payroll Compliance'],
-        status: 'Shipped',
-        link: '#',
-    },
-    {
-        title: 'Automated Data Pipeline',
-        description:
-            'Architected automated data pipelines that reduced manual record maintenance by up to 90% through self-serve source data access. Eliminated recurring manual processes across multiple teams.',
-        tags: ['C#', 'SQL', 'Automation', 'REST APIs'],
-        status: 'Shipped',
-        link: '#',
-    },
+            'AI-powered job search agent built with React and Claude. Upload your resume, set your criteria, and let ' +
+            'the agent surface the most compatible listings with a ranked compatibility score.',
+        tags: ['React', 'TypeScript', 'Claude', 'API', 'SQL', 'JSON', 'HTML', 'Database'],
+        status: 'In Progress',
+        link: 'https://github.com/Kaito321/jobsearchagent',
+    }
 ]
 
 function Projects() {

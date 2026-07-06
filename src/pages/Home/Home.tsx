@@ -26,10 +26,11 @@ const PaperAirplane = () => (
     </svg>
 )
 
+/* --TODO: evaluate whether this will be used in the final version
 const Hammer = () => (
     <svg
-        width="20"
-        height="20"
+        width="25"
+        height="25"
         viewBox="-1.5 -1.5 24 24"
         xmlns="http://www.w3.org/2000/svg"
         style={{ transform: 'scaleX(-1)' }}
@@ -39,7 +40,7 @@ const Hammer = () => (
             d="m2.536 8.9l2.828 2.828l6.364-6.364l-2.829-2.828zm12.727 5.656l-4.95-4.95l-.706.708l4.95 4.95zm1.415 1.415l-.707.707l1.767 1.767a.5.5 0 0 0 .707-.707zM6.01 2.596L7.485 1.12a2 2 0 0 1 2.829 0l2.828 2.829a2 2 0 0 1 0 2.828l-1.414 1.414l8.132 8.132a2.5 2.5 0 1 1-3.536 3.536l-8.132-8.132l-1.414 1.414a2 2 0 0 1-2.828 0l-2.83-2.827a2 2 0 0 1 0-2.829l1.475-1.474a1.5 1.5 0 0 1 .293-1.708L4.303 2.89a1.5 1.5 0 0 1 1.708-.293z"
         />
     </svg>
-)
+)*/
 
 const MailIcon = () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,17 +57,44 @@ function Home() {
         const el = nameRef.current
         const plane = airplaneRef.current
         if (el && plane) {
+            const updatePosition = () => {
+                const nameWidth = el.offsetWidth
+                const svgEl = plane.querySelector('svg')
+                const planeWidth = svgEl ? svgEl.getBoundingClientRect().width : 28
+
+                plane.style.setProperty('--travel-distance', `${nameWidth - planeWidth * -1}px`)
+            }
+
+            updatePosition()
+
             setTimeout(() => {
                 el.classList.add('animate')
                 plane.classList.add('animate')
+                if (el.parentElement) {
+                    el.parentElement.classList.add('animate')
+                }
             }, 300)
+
+            window.addEventListener('resize', () => {
+                el.classList.remove('animate')
+                plane.classList.remove('animate')
+                plane.style.transition = 'none'
+
+                setTimeout(() => {
+                    updatePosition()
+                    el.classList.add('animate')
+                    plane.classList.add('animate')
+                }, 300)
+            })
+
+            return () => window.removeEventListener('resize', updatePosition)
         }
     }, [])
 
     return (
         <section className="hero" id="home">
             <div className="hero-content">
-                <p className="hero-eyebrow">Software Engineer</p>
+                <p className="hero-eyebrow">Senior Software Engineer</p>
                 <h1 className="hero-title">
                     Hi, I'm{' '}
                     <span className="hero-name-wrapper">
@@ -77,11 +105,12 @@ function Home() {
           </span>
                 </h1>
                 <p className="hero-subtitle">
-                    I build reliable, scalable backend systems and bring them to life across the full stack.
+                    Senior backend engineer by trade, maker at heart. Whether I’m refactoring complex enterprise code, 
+                    building high-compliance automation pipelines, or designing a custom clothing line, 
+                    I’m obsessed with turning complicated logic into elegant, reliable design.
                 </p>
                 <div className="hero-cta">
                     <a href="#projects" className="btn-oval">
-                        <Hammer />
                         <span>View My Work</span>
                     </a>
                     <a href="#contact" className="btn-icon-only" aria-label="Get in touch">

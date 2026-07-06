@@ -24,6 +24,7 @@
     width: 100%;
 }
 
+/*noinspection CssNoGenericFontName*/
 .hero-eyebrow {
     font-family: var(--font-body);
     font-size: 0.875rem;
@@ -45,9 +46,19 @@
     position: relative;
     color: var(--text-primary);
     display: inline-block;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 1.2s ease 0.3s;
 }
-/* underline */
+
+.hero-name.animate {
+    clip-path: inset(0 -10% 0 0);
+}
+
 .hero-name::after {
+    display: none;
+}
+
+.hero-name-wrapper::after {
     content: '';
     position: absolute;
     bottom: -4px;
@@ -64,8 +75,8 @@
     transition: width 1.2s ease 0.3s;
 }
 
-.hero-name.animate::after {
-    width: 100%;
+.hero-name-wrapper.animate::after {
+    width: 112%;
 }
 
 .hero-subtitle {
@@ -91,25 +102,26 @@
 
 .airplane-wrapper {
     position: absolute;
-    bottom: -36px;
     left: 0;
     opacity: 0;
-    transform: translateX(0px);
+    transform: translateX(0px) translateY(50%);
     transition: none;
 }
 
+/*noinspection CssUnresolvedCustomProperty*/
 .airplane-wrapper.animate {
     opacity: 1;
-    transform: translateX(calc(100% + 412px));
+    transform: translateX(var(--travel-distance)) translateY(40%);
     transition: opacity 0.1s ease 0.3s, transform 1.2s ease 0.3s;
 }
 
 .airplane-icon {
-    width: 28px;
-    height: 28px;
+    width: clamp(16px, 2.5vw, 28px);
+    height: clamp(16px, 2.5vw, 28px);
 }
 
 /* --------- Hero CTA buttons ---------*/
+/*noinspection CssNoGenericFontName*/
 .btn-oval {
     display: inline-flex;
     align-items: center;
