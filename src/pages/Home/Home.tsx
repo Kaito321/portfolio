@@ -89,7 +89,7 @@ function Home() {
           </span>
                 </h1>
                 <p className="hero-subtitle">
-                    Senior backend engineer by trade, maker at heart. Whether I’m refactoring complex enterprise code, 
+                    Engineer by trade, maker at heart. Whether I’m refactoring complex enterprise code, 
                     building high-compliance automation pipelines, or designing a custom clothing line, 
                     I’m obsessed with turning complicated logic into elegant, reliable design.
                 </p>
