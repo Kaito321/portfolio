@@ -2,67 +2,113 @@
     background: var(--bg-primary);
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    gap: 3rem;
-}
-
-.skill-category {
+.skills-tiers {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 4rem;
 }
 
-.skill-category-title {
-    font-family: var(--font-display);
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    padding-bottom: 0.75rem;
+.skills-tier {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tier-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid rgba(15, 123, 108, 0.2);
 }
 
-.skill-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+.tier-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--teal-light);
 }
 
-.skill-item {
+.tier-growing .tier-title {
+    color: var(--text-primary);
+}
+
+.tier-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.tier-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 2rem;
+}
+
+.tier-category {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+}
+
+.tier-category-title {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
 }
 
-.skill-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.skill-name {
-    font-size: 0.875rem;
-    color: var(--text-primary);
-    font-weight: 500;
-}
-
-.skill-percent {
-    font-size: 0.75rem;
-    color: var(--teal-light);
+.skill-tag {
     font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    user-select: none;
 }
 
-.skill-bar {
-    height: 4px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 2px;
-    overflow: hidden;
+.tier-core .skill-tag {
+    background: var(--teal-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--teal-primary);
 }
 
-.skill-bar-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--teal-primary), var(--teal-light));
-    border-radius: 2px;
-    transition: width 1s ease;
+.tier-growing .skill-tag {
+    background: transparent;
+    color: var(--teal-light);
+    border: 1px solid rgba(15, 123, 108, 0.4);
+}
+
+.skill-tag-linked {
+    cursor: pointer;
+}
+
+.tier-core .skill-tag-linked:hover {
+    background: var(--teal-light);
+    transform: translateY(-2px);
+}
+
+.tier-growing .skill-tag-linked:hover {
+    border-color: var(--teal-light);
+    background: rgba(15, 123, 108, 0.1);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .skills-tiers {
+        gap: 3rem;
+    }
+
+    .tier-title {
+        font-size: 1.25rem;
+    }
 }

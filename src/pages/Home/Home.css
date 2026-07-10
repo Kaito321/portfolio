@@ -104,14 +104,14 @@
     position: absolute;
     left: 0;
     opacity: 0;
-    transform: translateX(0px) translateY(50%);
+    transform: translateX(0px) translateY(-60%);
     transition: none;
 }
 
 /*noinspection CssUnresolvedCustomProperty*/
 .airplane-wrapper.animate {
     opacity: 1;
-    transform: translateX(var(--travel-distance)) translateY(40%);
+    transform: translateX(var(--travel-distance)) translateY(30%);
     transition: opacity 0.1s ease 0.3s, transform 1.2s ease 0.3s;
 }
 

@@ -46,18 +46,27 @@ function Home() {
                 const svgEl = plane.querySelector('svg')
                 const planeWidth = svgEl ? svgEl.getBoundingClientRect().width : 28
 
-                plane.style.setProperty('--travel-distance', `${nameWidth - planeWidth * -1}px`)
+                plane.style.setProperty('--travel-distance', `${nameWidth + planeWidth + 10}px`)
             }
 
-            updatePosition()
+            const startAnimation = () => {
+                updatePosition()
 
-            setTimeout(() => {
-                el.classList.add('animate')
-                plane.classList.add('animate')
-                if (el.parentElement) {
-                    el.parentElement.classList.add('animate')
-                }
-            }, 300)
+                setTimeout(() => {
+                    el.classList.add('animate')
+                    plane.classList.add('animate')
+                    if (el.parentElement) {
+                        el.parentElement.classList.add('animate')
+                    }
+                }, 300)
+            }
+
+            // Wait for fonts to load before measuring
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(startAnimation)
+            } else {
+                startAnimation()
+            }
 
             window.addEventListener('resize', () => {
                 el.classList.remove('animate')
@@ -68,6 +77,9 @@ function Home() {
                     updatePosition()
                     el.classList.add('animate')
                     plane.classList.add('animate')
+                    if (el.parentElement) {
+                        el.parentElement.classList.add('animate')
+                    }
                 }, 300)
             })
 
