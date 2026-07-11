@@ -15,8 +15,8 @@ function Navbar() {
     return (
         <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
             <div className="navbar-inner">
-                <a href="#home" className="navbar-logo" aria-label="Home">
-                    <img src="/favicon.svg" alt="Rosa Builds" />
+                <a href="#home" className="navbar-logo">
+                    <span className="logo-r">R</span><span className="logo-b">b</span>
                 </a>
                 <ul className="navbar-links">
                     <li><a href="#home">Home</a></li>

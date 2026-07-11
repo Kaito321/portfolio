@@ -24,15 +24,21 @@
 }
 
 .navbar-logo {
-    display: flex;
-    align-items: center;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: baseline;
     transition: transform 0.2s ease;
 }
 
-.navbar-logo img {
-    width: 36px;
-    height: 36px;
-    display: block;
+.navbar-logo .logo-r {
+    color: var(--text-primary);
+}
+
+.navbar-logo .logo-b {
+    color: var(--teal-light);
 }
 
 .navbar-logo:hover {
