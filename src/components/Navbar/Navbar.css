@@ -24,15 +24,19 @@
 }
 
 .navbar-logo {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--teal-light);
-    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.navbar-logo img {
+    width: 36px;
+    height: 36px;
+    display: block;
 }
 
 .navbar-logo:hover {
-    color: var(--text-primary);
+    transform: translateY(-2px);
 }
 
 .navbar-links {

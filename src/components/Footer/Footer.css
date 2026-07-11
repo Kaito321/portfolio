@@ -15,11 +15,9 @@
 }
 
 .footer-logo {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--teal-light);
-    letter-spacing: 0.1em;
+    width: 32px;
+    height: 32px;
+    display: block;
 }
 
 .footer-copy {

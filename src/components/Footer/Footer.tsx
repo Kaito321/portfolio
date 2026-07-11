@@ -4,7 +4,7 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="footer-inner">
-                <p className="footer-logo">RR</p>
+                <img src="/favicon.svg" alt="Rosa Builds" className="footer-logo" />
                 <p className="footer-copy">
                     Designed & built by Rosa Rivera 2026
                 </p>
