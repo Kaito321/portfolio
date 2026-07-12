@@ -1,12 +1,12 @@
 ﻿import './Projects.css'
 
-const projects = [
+export const projects = [
     {
         title: 'Portfolio Website',
         description:
             'A full stack personal portfolio built with React, TypeScript, and Vite. Deployed on AWS with CI/CD via ' +
             'GitHub Actions. Features AI integration and a clean, responsive design.',
-        tags: ['React', 'TypeScript', 'AWS', 'Docker', 'CI/CD'],
+        tags: ['JavaScript', 'React', 'TypeScript', 'AWS', 'CI/CD', 'Git', 'Claude'],
         status: 'In Progress',
         link: '#',
     },
@@ -15,7 +15,7 @@ const projects = [
         description:
             'AI-powered job search agent built with React and Claude. Upload your resume, set your criteria, and let ' +
             'the agent surface the most compatible listings with a ranked compatibility score.',
-        tags: ['React', 'TypeScript', 'Claude', 'API', 'SQL', 'JSON', 'HTML', 'Database'],
+        tags: ['React', 'TypeScript', 'Claude', 'API', 'SQL', 'JSON', 'HTML', 'Database', 'Git'],
         status: 'In Progress',
         link: 'https://github.com/Kaito321/jobsearchagent',
     }

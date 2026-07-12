@@ -29,10 +29,6 @@
     color: var(--teal-light);
 }
 
-.tier-growing .tier-title {
-    color: var(--text-primary);
-}
-
 .tier-subtitle {
     font-size: 0.95rem;
     color: var(--text-muted);
@@ -74,32 +70,17 @@
     border-radius: 4px;
     transition: all 0.2s ease;
     user-select: none;
-}
-
-.tier-core .skill-tag {
     background: var(--teal-primary);
     color: var(--text-primary);
     border: 1px solid var(--teal-primary);
-}
-
-.tier-growing .skill-tag {
-    background: transparent;
-    color: var(--teal-light);
-    border: 1px solid rgba(15, 123, 108, 0.4);
 }
 
 .skill-tag-linked {
     cursor: pointer;
 }
 
-.tier-core .skill-tag-linked:hover {
+.skill-tag-linked:hover {
     background: var(--teal-light);
-    transform: translateY(-2px);
-}
-
-.tier-growing .skill-tag-linked:hover {
-    border-color: var(--teal-light);
-    background: rgba(15, 123, 108, 0.1);
     transform: translateY(-2px);
 }
 

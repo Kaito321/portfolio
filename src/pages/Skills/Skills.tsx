@@ -1,4 +1,5 @@
 ﻿import './Skills.css'
+import { projects } from '../Projects/Projects'
 
 const skillsData = {
     core: {
@@ -20,18 +21,17 @@ const skillsData = {
     },
 }
 
-// Keep this in sync with the projects array in Projects.tsx
-const projectTags = [
-    'React', 'TypeScript', 'AWS', 'Docker', 'CI/CD',
-    'C#', '.NET', 'SQL Server', 'Payroll Compliance',
-    'SQL', 'Automation', 'REST APIs',
-]
+// Automatically checks projects and exports skills used to keep skill button functions in sync with actual projects
+const projectTags = Array.from(
+    new Set(projects.flatMap((p) => p.tags))
+)
 
 function Skills() {
-    const hasProject = (skill: string) => projectTags.includes(skill)
+    const hasProject = (skill: string, tierKey: string) =>
+        tierKey === 'growing' && projectTags.includes(skill)
 
-    const handleSkillClick = (skill: string) => {
-        if (hasProject(skill)) {
+    const handleSkillClick = (skill: string, tierKey: string) => {
+        if (hasProject(skill, tierKey)) {
             const projectsSection = document.getElementById('projects')
             if (projectsSection) {
                 projectsSection.scrollIntoView({ behavior: 'smooth' })
@@ -57,12 +57,12 @@ function Skills() {
                                         <h4 className="tier-category-title">{category}</h4>
                                         <div className="skill-tags">
                                             {skills.map((skill) => {
-                                                const isLinked = hasProject(skill)
+                                                const isLinked = hasProject(skill, tierKey)
                                                 return (
                                                     <span
                                                         className={`skill-tag ${isLinked ? 'skill-tag-linked' : ''}`}
                                                         key={skill}
-                                                        onClick={() => handleSkillClick(skill)}
+                                                        onClick={() => handleSkillClick(skill, tierKey)}
                                                     >
                                                         {skill}
                                                     </span>
