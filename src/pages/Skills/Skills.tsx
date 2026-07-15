@@ -1,25 +1,6 @@
 ﻿import './Skills.css'
-import { projects } from '../Projects/Projects'
-
-const skillsData = {
-    core: {
-        title: 'Core',
-        subtitle: 'What I ship with confidence',
-        categories: {
-            'Languages & Frameworks': ['C#', '.NET', 'PHP', 'Python'],
-            'Data & Databases': ['SQL', 'SQL Server', 'MySQL', 'Database Design', 'Splunk'],
-            'Tools & Practices': ['Git', 'REST APIs'],
-        },
-    },
-    growing: {
-        title: 'Actively Growing',
-        subtitle: 'What I\'m sharpening right now',
-        categories: {
-            'Languages & Frameworks': ['TypeScript', 'React', 'JavaScript'],
-            'Tools & Practices': ['Docker', 'AWS', 'CI/CD'],
-        },
-    },
-}
+import { projects } from '../../data/projects'
+import { skills } from '../../data/skills'
 
 // Automatically checks projects and exports skills used to keep skill button functions in sync with actual projects
 const projectTags = Array.from(
@@ -45,7 +26,7 @@ function Skills() {
                 <p className="section-eyebrow">Technical Skills</p>
                 <h2 className="section-title">Tools of the trade</h2>
                 <div className="skills-tiers">
-                    {Object.entries(skillsData).map(([tierKey, tier]) => (
+                    {Object.entries(skills).map(([tierKey, tier]) => (
                         <div className={`skills-tier tier-${tierKey}`} key={tierKey}>
                             <div className="tier-header">
                                 <h3 className="tier-title">{tier.title}</h3>

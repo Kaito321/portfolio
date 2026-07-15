@@ -1,27 +1,15 @@
-﻿import './Projects.css'
+﻿import { useState } from 'react'
+import './Projects.css'
+import { projects, type Project } from '../../data/projects'
+import ProjectModal from '../../components/ProjectModal/ProjectModal'
 
-export const projects = [
-    {
-        title: 'Portfolio Website',
-        description:
-            'A full stack personal portfolio built with React, TypeScript, and Vite. Deployed on AWS with CI/CD via ' +
-            'GitHub Actions. Features AI integration and a clean, responsive design.',
-        tags: ['JavaScript', 'React', 'TypeScript', 'AWS', 'CI/CD', 'Git', 'Claude'],
-        status: 'In Progress',
-        link: '#',
-    },
-    {
-        title: 'JobSearch App with Claude',
-        description:
-            'AI-powered job search agent built with React and Claude. Upload your resume, set your criteria, and let ' +
-            'the agent surface the most compatible listings with a ranked compatibility score.',
-        tags: ['React', 'TypeScript', 'Claude', 'API', 'SQL', 'JSON', 'HTML', 'Database', 'Git'],
-        status: 'In Progress',
-        link: 'https://github.com/Kaito321/jobsearchagent',
-    }
-]
 
 function Projects() {
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+
+    const openModal = (project: Project) => setSelectedProject(project)
+    const closeModal = () => setSelectedProject(null)
+
     return (
         <section className="projects section-padding" id="projects">
             <div className="projects-inner section-inner">
@@ -29,12 +17,16 @@ function Projects() {
                 <h2 className="section-title">Things I've built.</h2>
                 <div className="projects-grid">
                     {projects.map((project) => (
-                        <div className="project-card" key={project.title}>
+                        <div
+                            className="project-card"
+                            key={project.title}
+                            onClick={() => openModal(project)}
+                        >
                             <div className="project-card-header">
                                 <h3 className="project-title">{project.title}</h3>
-                                <span className={`project-status ${project.status === 'In Progress' ? 'status-progress' : 'status-shipped'}`}>
-                  {project.status}
-                </span>
+                                <span className={`project-status status-${project.status.toLowerCase().replace(/\s+/g, '-')}`}>
+                                    {project.status}
+                                </span>
                             </div>
                             <p className="project-description">{project.description}</p>
                             <div className="project-tags">
@@ -46,6 +38,12 @@ function Projects() {
                     ))}
                 </div>
             </div>
+
+            <ProjectModal
+                project={selectedProject}
+                isOpen={selectedProject !== null}
+                onClose={closeModal}
+            />
         </section>
     )
 }

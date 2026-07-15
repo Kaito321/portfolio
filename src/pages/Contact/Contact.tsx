@@ -34,8 +34,8 @@ function Contact() {
                 <p className="section-eyebrow">Contact</p>
                 <h2 className="section-title">Let's build something.</h2>
                 <p className="contact-intro">
-                    Open to full-time roles, contract work, and collaborations. If you have a role in mind,
-                    a project to discuss, or just want to connect — my inbox is open.
+                    Open to full-time roles, contract work, and side projects worth building. If you have something in mind 
+                    — or just want to say hi — send it over. I actually read my inbox...eventually.
                 </p>
                 <div className="contact-links">
                     <a href="mailto:rars213@gmail.com" className="contact-link">

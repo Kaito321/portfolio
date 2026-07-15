@@ -101,9 +101,9 @@ function Home() {
           </span>
                 </h1>
                 <p className="hero-subtitle">
-                    Engineer by trade, maker at heart. Whether I’m refactoring complex enterprise code, 
-                    building high-compliance automation pipelines, or designing a custom clothing line, 
-                    I’m obsessed with turning complicated logic into elegant, reliable design.
+                    I build things. Backend systems that handle millions of tax calculations, small apps I actually use,
+                    costumes stitched from patterns I drafted myself. The medium changes; the impulse doesn't. 
+                    I like taking something messy and making it work reliably.
                 </p>
                 <div className="hero-cta">
                     <a href="#projects" className="btn-oval">

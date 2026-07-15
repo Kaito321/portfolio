@@ -9,16 +9,16 @@ function About() {
                 <div className="about-grid">
                     <div className="about-text">
                         <p>
-                            I’m a bilingual software engineer who spent the last five years building heavy-duty 
-                            enterprise backend architecture. My focus is on high-stakes, transactional environments—the 
-                            kind of work that involves designing multi-bracket international tax compliance logic or 
-                            building automated data pipelines that slashed manual system maintenance by 90%.
+                            I'm a software engineer with five years spent in high-stakes backend work 
+                            — the kind where a wrong calculation means clients get over-taxed or a system silently loses data. 
+                            Multi-bracket international tax compliance, automated pipelines, calculation engines that need to survive real payroll edge cases. 
+                            It's precise, unforgiving work, and I like it that way.
                         </p>
                         <p>
-                            While my core toolkit centers on C#, .NET, and SQL, I treat engineering as a true craft —
-                            the same attention I bring to a complex backend system, I bring to everything I build.
-                            I'm always evolving my stack, constantly integrating new tools—from Docker containerization
-                            to modern AI workflows—to build cleaner, smarter solutions from the ground up.
+                            My core stack is C#, .NET, and SQL, but I treat engineering as craft — 
+                            the same attention I bring to a complex backend system, I bring to a sewing pattern or a hand-drafted design. 
+                            Right now I'm expanding into Docker, cloud architecture, and AI workflows because 
+                            I like knowing how the whole thing fits together, not just the piece I'm assigned to.
                         </p>
                     </div>
                     <div className="about-stats">

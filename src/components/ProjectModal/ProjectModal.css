@@ -1,0 +1,108 @@
+.project-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-modal-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.project-modal-description {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.project-modal-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.project-modal-section-title {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--teal-light);
+}
+
+.project-modal-section-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.project-modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-modal-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(15, 123, 108, 0.15);
+    margin-top: 0.5rem;
+}
+
+.project-modal-link {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--teal-primary);
+    color: var(--teal-light);
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+.project-modal-link:hover {
+    background: rgba(15, 123, 108, 0.1);
+    transform: translateY(-2px);
+}
+
+.project-modal-link-primary {
+    background: var(--teal-primary);
+    color: var(--text-primary);
+}
+
+.project-modal-link-primary:hover {
+    background: var(--teal-light);
+    color: var(--bg-primary);
+}
+
+@media (max-width: 768px) {
+    .project-modal-title {
+        font-size: 1.4rem;
+    }
+
+    .project-modal-description {
+        font-size: 0.95rem;
+    }
+
+    .project-modal-links {
+        flex-direction: column;
+    }
+
+    .project-modal-link {
+        text-align: center;
+    }
+}
