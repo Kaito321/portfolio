@@ -35,8 +35,8 @@ function About() {
                             <span className="stat-label">Creator by nature, in every medium</span>
                         </div>
                         <div className="stat">
-                            <span className="stat-text">Bilingual</span>
-                            <span className="stat-label">English & Spanish — built compliance systems for international markets</span>
+                            <span className="stat-text">Technical SME</span>
+                            <span className="stat-label">Bridge between Product, QA, and Engineering on complex international compliance</span>
                         </div>
                     </div>
                 </div>
