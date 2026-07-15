@@ -121,7 +121,7 @@ export const experiences: Company[] = [
     },
     {
         company: 'Accenture Federal Services',
-        location: 'Remote',
+        location: 'San Antonio, Texas',
         roles: [
             {
                 role: 'Data Scientist Intern',
